@@ -19,10 +19,6 @@ export const App = () => {
     if (option === 'bad') {
       setBad(option => option + 1);
     }
-    // console.log('log  значения option внути handleClick', option);
-    // console.log('good в стейте', good);
-    // console.log('neutral в стейте', neutral);
-    // console.log('bad в стейте', bad);
   };
 
   const countTotalFeedback = () => {
@@ -37,7 +33,7 @@ export const App = () => {
     <>
       <Section title="Please leave feedback">
         <FeedbackOptions
-          options={{ good, neutral, bad }}
+          options={['good', 'neutral', 'bad']}
           onLeaveFeedback={handleClick}
         />
       </Section>
